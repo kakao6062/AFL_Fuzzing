@@ -66,6 +66,16 @@ afl-fuzz -i ./afl-2.52b/testcases/others/text/ -o ./out ./src/target
 > 横か縦に広げてあげると正常に動作するはずです．  
 > この現象は QEMU 等を動作させる際にも起きるので覚えておくと良いです．
 
+> [!WARNING]
+> PROGRAM ABORT : Suboptimal CPU scaling governor と出た場合，以下の設定を行ってください．  
+> ```
+> cd /sys/devices/system/cpu
+> echo performance | tee cpu*/cpufreq/scaling_governor
+> cd
+> ```
+> AFLの生成する短命プロセスの実行時間が不安定になる「周波数スケジューリング」が有効になっていることが原因です．
+> それを無効にするコマンドを叩いています．
+
 ## ミニ課題
 
 ### 1-1
@@ -89,3 +99,4 @@ afl-fuzz -i ./afl-2.52b/testcases/others/text/ -o ./out ./src/target
 ### 参考
 
 - [https://www.ipa.go.jp/security/vuln/fuzzing/ug65p9000001986g-att/000081408.pdf](https://www.ipa.go.jp/security/vuln/fuzzing/ug65p9000001986g-att/000081408.pdf)
+
