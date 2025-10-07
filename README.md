@@ -104,9 +104,15 @@ afl-fuzz -i ./afl-2.52b/testcases/others/text/ -o ./out ./src/target
 `out` ディレクトリ内にある他の情報を 1 つ挙げ，それらについて調査せよ．  
 情報によって使用するコマンドは異なるため，コマンドは各自で調べつつ，調査すること．
 
+### 1-3
+
+実はコンパイルしなくてもバイナリを直接ファジングする方法がある．  
+調べて実践してみなさい．
+
 ### 参考
 
 - [https://www.ipa.go.jp/security/vuln/fuzzing/ug65p9000001986g-att/000081408.pdf](https://www.ipa.go.jp/security/vuln/fuzzing/ug65p9000001986g-att/000081408.pdf)
+
 
 
 
