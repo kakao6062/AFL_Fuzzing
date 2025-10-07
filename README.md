@@ -14,6 +14,14 @@
 
 ## セットアップ
 
+Dockerなどインストール
+
+```sh
+sudo apt-get update && sudo apt-get install -y gcc make docker docker-compose cmake
+```
+
+コンテナ立ち上げ
+
 ```sh
 docker build . -t aflfuzz
 docker run --privileged -it aflfuzz
@@ -99,5 +107,6 @@ afl-fuzz -i ./afl-2.52b/testcases/others/text/ -o ./out ./src/target
 ### 参考
 
 - [https://www.ipa.go.jp/security/vuln/fuzzing/ug65p9000001986g-att/000081408.pdf](https://www.ipa.go.jp/security/vuln/fuzzing/ug65p9000001986g-att/000081408.pdf)
+
 
 
