@@ -52,7 +52,7 @@ echo core >/proc/sys/kernel/core_pattern
 afl-fuzz -i <入力ディレクトリ> -o <出力ディレクトリ> <解析対象バイナリ>
 ```
 
-入力ディレクトリには，`afl-2.52b` の `testcases/others/text` を用いる．  
+入力ディレクトリには，`AFLplusplus` の `testcases/others/text` を用いる．  
 出力ディレクトリは，適当に `out` ディレクトリを作っておく．
 
 ```sh
@@ -62,7 +62,7 @@ mkdir out
 ここまで把握したら実行してみる
 
 ```sh
-afl-fuzz -i ./afl-2.52b/testcases/others/text/ -o ./out ./src/target
+afl-fuzz -i ./AFLplusplus/testcases/others/text/ -o ./out ./src/target
 ```
 
 ![alt text](./imgs/afl_proc.png)
@@ -109,9 +109,14 @@ afl-fuzz -i ./afl-2.52b/testcases/others/text/ -o ./out ./src/target
 実はコンパイルしなくてもバイナリを直接ファジングする方法がある．  
 調べて実践してみなさい．
 
+> [!WARNING]
+> かなりの時間がかかります．  
+> 実行できたらOKくらいの認識で．
+
 ### 参考
 
 - [https://www.ipa.go.jp/security/vuln/fuzzing/ug65p9000001986g-att/000081408.pdf](https://www.ipa.go.jp/security/vuln/fuzzing/ug65p9000001986g-att/000081408.pdf)
+
 
 
 
