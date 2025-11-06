@@ -65,7 +65,7 @@ mkdir out
 afl-fuzz -i ./AFLplusplus/testcases/others/text/ -o ./out ./src/target
 ```
 
-![alt text](./imgs/afl_proc.png)
+![alt text](./imgs/afl++_proc.png)
 
 永続的にファジングが実行されるので，適当なタイミングで `ctrl+c` で打ち切りましょう．
 
